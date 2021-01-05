@@ -13,6 +13,9 @@
 		018587C925A09B340043F648 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018587C725A09B340043F648 /* Main.storyboard */; };
 		018587CB25A09B370043F648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018587CA25A09B370043F648 /* Assets.xcassets */; };
 		018587CE25A09B370043F648 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018587CC25A09B370043F648 /* LaunchScreen.storyboard */; };
+		018587D725A09DAC0043F648 /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018587D625A09DAC0043F648 /* Words.swift */; };
+		018587DA25A0B4070043F648 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018587D925A0B4070043F648 /* Game.swift */; };
+		018587DD25A45C980043F648 /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018587DC25A45C980043F648 /* Cities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		018587CA25A09B370043F648 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		018587CD25A09B370043F648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		018587CF25A09B370043F648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		018587D625A09DAC0043F648 /* Words.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
+		018587D925A0B4070043F648 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		018587DC25A45C980043F648 /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				018587CA25A09B370043F648 /* Assets.xcassets */,
 				018587CC25A09B370043F648 /* LaunchScreen.storyboard */,
 				018587CF25A09B370043F648 /* Info.plist */,
+				018587D925A0B4070043F648 /* Game.swift */,
+				018587D625A09DAC0043F648 /* Words.swift */,
+				018587DC25A45C980043F648 /* Cities.swift */,
 			);
 			path = Names;
 			sourceTree = "<group>";
@@ -137,7 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				018587DD25A45C980043F648 /* Cities.swift in Sources */,
 				018587C625A09B340043F648 /* ViewController.swift in Sources */,
+				018587DA25A0B4070043F648 /* Game.swift in Sources */,
+				018587D725A09DAC0043F648 /* Words.swift in Sources */,
 				018587C225A09B340043F648 /* AppDelegate.swift in Sources */,
 				018587C425A09B340043F648 /* SceneDelegate.swift in Sources */,
 			);
@@ -289,6 +301,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZUPX72RCBQ;
 				INFOPLIST_FILE = Names/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZUPX72RCBQ;
 				INFOPLIST_FILE = Names/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
