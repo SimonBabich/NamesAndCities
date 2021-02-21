@@ -44,13 +44,17 @@ class ViewController: UIViewController {
         //currentGame.word = "Start"
         wordLabel.text = "С т а р т"
         countersLabel.text = ""
-        showAlert(alertTitle: "Старт")
+//        showAlert(alertTitle: "Старт")
         //но начало иры почему-то приходится задавать здесь
         //setupNewGame()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        showAlert(alertTitle: "Старт")
+    }
 
     
-    ///Создаем новую игру
+    /// Создаем новую игру
     func setupNewGame() {
         // Если у нас оставлиьс неиспользуемые имена, то конфигурируем игру
         
@@ -63,7 +67,8 @@ class ViewController: UIViewController {
             let index = Int(arc4random_uniform(UInt32(cities.count - 1)))
             let word = cities.remove(at: index).uppercased()
             ConfigureNewGame(word)
-        } else {
+        }
+        else {
                 enableButtons(false)
                 wordLabel.text = "Game Over"
         }
@@ -158,7 +163,7 @@ class ViewController: UIViewController {
     }
     
     //выдаем сообщение о резултьате игры с загаданным именем и начинаем новую игру
-    func showAlert(alertTitle:String) {
+    func showAlert(alertTitle: String) {
         //при перовом запуске еще нет слова, поэтому сообщение = Выберете игру
         if start == true {
             msg = "Выберете игру"
