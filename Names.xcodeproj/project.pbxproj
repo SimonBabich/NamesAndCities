@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		018587C225A09B340043F648 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018587C125A09B340043F648 /* AppDelegate.swift */; };
-		018587C425A09B340043F648 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018587C325A09B340043F648 /* SceneDelegate.swift */; };
 		018587C625A09B340043F648 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018587C525A09B340043F648 /* ViewController.swift */; };
 		018587C925A09B340043F648 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018587C725A09B340043F648 /* Main.storyboard */; };
 		018587CB25A09B370043F648 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018587CA25A09B370043F648 /* Assets.xcassets */; };
@@ -21,7 +20,6 @@
 /* Begin PBXFileReference section */
 		018587BE25A09B340043F648 /* Names.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Names.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018587C125A09B340043F648 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		018587C325A09B340043F648 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		018587C525A09B340043F648 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		018587C825A09B340043F648 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		018587CA25A09B370043F648 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				018587C125A09B340043F648 /* AppDelegate.swift */,
-				018587C325A09B340043F648 /* SceneDelegate.swift */,
 				018587C525A09B340043F648 /* ViewController.swift */,
 				018587C725A09B340043F648 /* Main.storyboard */,
 				018587CA25A09B370043F648 /* Assets.xcassets */,
@@ -151,7 +148,6 @@
 				018587DA25A0B4070043F648 /* Game.swift in Sources */,
 				018587D725A09DAC0043F648 /* Words.swift in Sources */,
 				018587C225A09B340043F648 /* AppDelegate.swift in Sources */,
-				018587C425A09B340043F648 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
