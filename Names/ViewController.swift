@@ -61,12 +61,14 @@ class ViewController: UIViewController {
         if gameType == "Names" && names.isEmpty == false {
             let index = Int(arc4random_uniform(UInt32(names.count - 1)))
             let word = names.remove(at: index).uppercased()
-            ConfigureNewGame(word)
+            ConfigureNewGame(word,"")
         }
         else if cities.isEmpty == false {
-            let index = Int(arc4random_uniform(UInt32(cities.count - 1)))
-            let word = cities.remove(at: index).uppercased()
-            ConfigureNewGame(word)
+            let index = Int(arc4random_uniform(UInt32(cities.count)))
+            let country = cities.remove(at: index) //  .array.keys[index]
+            let word = country.0.uppercased()
+            //let flag = country.2
+            ConfigureNewGame(word,country.1)
         }
         else {
                 enableButtons(false)
@@ -78,15 +80,16 @@ class ViewController: UIViewController {
     }
     
     //Конфигурируем новую игру
-    func ConfigureNewGame(_ word: String) {
+    func ConfigureNewGame(_ word: String,_ country: String) {
         currentGame = Game(
             word: word,
+            country: country,
             numberOfLives: maxNumberOfLives,
             selectedLetter: [])
         enableButtons(true)
     }
     
-    ///Обновляем интерфейс
+    /// Обновляем интерфейс
     func updateUI() {
         //Опрелделяем название картинки
         let imageName: String = "Tree \(currentGame.numberOfLives)"
@@ -110,14 +113,14 @@ class ViewController: UIViewController {
         countersLabel.text = "\(gameName) Выигрышей: \(numberOfWins), Проигрышей: \(numberOfFails)"
     }
     
-    ///Добавляем таркеты кнопкам
+    /// Добавляем таркеты кнопкам
     func addTargetToButtons() {
         //прокручиваем массив кнопок через цикл
         for button in letterButtons {
             button.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
         }
     }
-    ////Обработка нажатий кнопок
+    //// Обработка нажатий кнопок
     @objc func buttonPressed(_ sender: UIButton) {
     
         if start == true {
@@ -125,7 +128,7 @@ class ViewController: UIViewController {
             start = false
         }
         
-        //disable button letter
+        // disable button letter
         sender.isEnabled = false
         
         if let letter = sender.title(for: .normal) {
@@ -168,7 +171,7 @@ class ViewController: UIViewController {
         if start == true {
             msg = "Выберете игру"
         } else if gameType == "Cities" {
-            msg = "Загаданый город: \(currentGame.word)"
+            msg = "Загаданая столица: \(currentGame.word) Страна: \(currentGame.country)"
         } else {
             msg = "Загаданное имя: \(currentGame.word)"
         }

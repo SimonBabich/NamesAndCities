@@ -1,7 +1,5 @@
 //
 //  Game.swift
-//  Names
-//
 //  Created by SimonBabich on 02.01.2021.
 //
 
@@ -11,6 +9,7 @@ import Foundation
 struct Game {
     ///Загаданное слово
     var word: String
+    var country: String
     
     ///Количество жизней
     var numberOfLives: Int
