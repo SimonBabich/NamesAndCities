@@ -50,7 +50,7 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        showAlert(alertTitle: "Старт")
+        showAlert(alertTitle: "Начало")
     }
 
     
@@ -64,7 +64,7 @@ class ViewController: UIViewController {
             ConfigureNewGame(word,"")
         }
         else if cities.isEmpty == false {
-            let index = Int(arc4random_uniform(UInt32(cities.count)))
+            let index = Int(arc4random_uniform(UInt32(cities.count-1)))
             let country = cities.remove(at: index) //  .array.keys[index]
             let word = country.0.uppercased()
             //let flag = country.2
@@ -124,7 +124,6 @@ class ViewController: UIViewController {
     @objc func buttonPressed(_ sender: UIButton) {
     
         if start == true {
-            setupNewGame()
             start = false
         }
         
